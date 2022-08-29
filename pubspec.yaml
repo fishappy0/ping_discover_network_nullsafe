@@ -5,12 +5,13 @@ author: Andrey Ushakov <flutter@tablemi.com>
 homepage: https://github.com/andrey-ushakov/ping_discover_network
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  wifi: ^0.1.5
+  wifi:
+    git: https://github.com/fishappy0/wifi_nullsafety
 
 dev_dependencies:
   flutter_test:

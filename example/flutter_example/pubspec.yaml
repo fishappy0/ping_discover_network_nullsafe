@@ -12,12 +12,12 @@ dependencies:
   cupertino_icons: ^0.1.2
   ping_discover_network:
     path: ../../
-  wifi: ^0.1.5
+  wifi:
+    git: https://github.com/fishappy0/wifi_nullsafety
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
 
 flutter:
   uses-material-design: true
