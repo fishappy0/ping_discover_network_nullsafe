@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ping_discover_network/ping_discover_network.dart';
-import 'package:wifi/wifi.dart';
+// import 'package:wifi/wifi.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,7 +23,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  String localIp = '';
+  String? localIp = '';
   List<String> devices = [];
   bool isDiscovering = false;
   int found = -1;
@@ -36,10 +36,10 @@ class _MyHomePageState extends State<MyHomePage> {
       found = -1;
     });
 
-    String ip;
+    String? ip;
     try {
-      ip = await Wifi.ip;
-      print('local ip:\t$ip');
+      // ip = await Wifi.ip;
+      // print('local ip:\t$ip');
     } catch (e) {
       final snackBar = SnackBar(
           content: Text('WiFi is not connected', textAlign: TextAlign.center));
@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       localIp = ip;
     });
 
-    final String subnet = ip.substring(0, ip.lastIndexOf('.'));
+    final String subnet = ip!.substring(0, ip.lastIndexOf('.'));
     int port = 80;
     try {
       port = int.parse(portController.text);
